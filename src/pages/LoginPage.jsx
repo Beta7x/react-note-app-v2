@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import LoginInput from "../components/LoginInput";
+import LoginFormInput from "../components/LoginFormInput";
 import LocaleContext from "../contexts/LocaleContext";
 import { login } from "../utils/network-data";
 
@@ -23,7 +23,7 @@ function LoginPage({ loginSuccess }) {
           ? "Yuk, login untuk menggunakan aplikasi."
           : "Login to use app, please."}
       </h2>
-      <LoginInput login={onLogin} />
+      <LoginFormInput login={onLogin} />
       <p>
         {locale === "id" ? "Belum punya akun?" : "Dont'have an account?"}{" "}
         <Link to="/register">

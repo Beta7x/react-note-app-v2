@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import LocaleContext from "../contexts/LocaleContext";
 
-const Navigation = () => {
+const NavigationBar = () => {
   const { locale } = useContext(LocaleContext);
 
   return (
@@ -18,4 +18,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavigationBar;

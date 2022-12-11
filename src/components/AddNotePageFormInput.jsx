@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { GrCheckmark } from "react-icons/gr";
 
-const AddNewPageInput = ({ addNote }) => {
+const AddNotePageFormInput = ({ addNote }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
@@ -48,8 +48,8 @@ const AddNewPageInput = ({ addNote }) => {
   );
 };
 
-AddNewPageInput.propTypes = {
+AddNotePageFormInput.propTypes = {
   addNote: PropTypes.func.isRequired,
 };
 
-export default AddNewPageInput;
+export default AddNotePageFormInput;

@@ -4,7 +4,7 @@ import { BiArchiveIn, BiArchiveOut } from "react-icons/bi";
 import React from "react";
 import Swal from "sweetalert2";
 
-const DetailPageAction = ({
+const DetailNotePageAction = ({
   id,
   title,
   archived,
@@ -79,7 +79,7 @@ const DetailPageAction = ({
   );
 };
 
-DetailPageAction.propTypes = {
+DetailNotePageAction.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   archived: PropTypes.bool,
@@ -88,4 +88,4 @@ DetailPageAction.propTypes = {
   deleteNote: PropTypes.func,
 };
 
-export default DetailPageAction;
+export default DetailNotePageAction;

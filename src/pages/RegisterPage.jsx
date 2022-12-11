@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { register } from "../utils/network-data";
 import { Link, useNavigate } from "react-router-dom";
-import RegisterInput from "../components/RegisterInput";
+import RegisterFormInput from "../components/RegisterFormInput";
 import LocaleContext from "../contexts/LocaleContext";
 
 function RegisterPage() {
@@ -22,7 +22,7 @@ function RegisterPage() {
           ? "Isi form untuk mendaftar akun"
           : "Fill the form to register account."}
       </h2>
-      <RegisterInput register={onRegisterHandler} />
+      <RegisterFormInput register={onRegisterHandler} />
       <p>
         {locale === "id" ? "Sudah punya akun?" : "Already have an account?"}{" "}
         <Link to="/">{locale === "id" ? "Login di sini" : "Login here"}</Link>

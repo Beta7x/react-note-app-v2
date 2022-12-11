@@ -3,7 +3,7 @@ import React from "react";
 import Swal from "sweetalert2";
 import useInput from "../hooks/useInput";
 
-const RegisterInput = ({ register }) => {
+const RegisterFormInput = ({ register }) => {
   const [name, onNameChange] = useInput("");
   const [email, onEmailChange] = useInput("");
   const [password, onPasswordChange] = useInput("");
@@ -50,8 +50,8 @@ const RegisterInput = ({ register }) => {
   );
 };
 
-RegisterInput.propTypes = {
+RegisterFormInput.propTypes = {
   register: PropTypes.func.isRequired,
 };
 
-export default RegisterInput;
+export default RegisterFormInput;

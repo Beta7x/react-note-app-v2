@@ -7,7 +7,7 @@ import NotesListEmpty from "../components/NotesListEmpty";
 import SearchBar from "../components/SearchBar";
 import LocaleContext from "../contexts/LocaleContext";
 
-const ArchivePage = () => {
+const ArchiveNotePage = () => {
   const { locale } = useContext(LocaleContext);
   const [loading, setLoading] = useState(true);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -53,4 +53,4 @@ const ArchivePage = () => {
   );
 };
 
-export default ArchivePage;
+export default ArchiveNotePage;

@@ -1,15 +1,15 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { getUserLogged, putAccessToken } from "./utils/network-data";
-import BtnLogout from "./components/BtnLogout";
-import BtnToggleLocale from "./components/BtnToggleLocale";
-import BtnToggleTheme from "./components/BtnToggleTheme";
-import Navigation from "./components/Navigation";
+import LogoutButton from "./components/LogoutButton";
+import LocaleToggleButton from "./components/LocaleToggleButton";
+import ThemeToggleButton from "./components/ThemeToggleButton";
+import NavigationBar from "./components/NavigationBar";
 import LocaleContext from "./contexts/LocaleContext";
 import ThemeContext from "./contexts/ThemeContext";
-import AddNewPage from "./pages/AddNewPage";
-import ArchivePage from "./pages/ArchivePage";
-import DetailPage from "./pages/DetailPage";
+import AddNotePage from "./pages/AddNotePage";
+import ArchiveNotePage from "./pages/ArchiveNotePage";
+import DetailNotePage from "./pages/DetailNotePage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -105,8 +105,8 @@ const App = () => {
                   {locale === "id" ? "Aplikasi Catatan" : "Notes App"}
                 </Link>
               </h1>
-              <BtnToggleLocale />
-              <BtnToggleTheme />
+              <LocaleToggleButton />
+              <ThemeToggleButton />
             </header>
             <main>
               <Routes>
@@ -133,17 +133,17 @@ const App = () => {
                 {locale === "id" ? "Aplikasi Catatan" : "Notes App"}
               </Link>
             </h1>
-            <Navigation />
-            <BtnToggleLocale />
-            <BtnToggleTheme />
-            <BtnLogout logout={onLogout} name={authedUser.name} />
+            <NavigationBar />
+            <LocaleToggleButton />
+            <ThemeToggleButton />
+            <LogoutButton logout={onLogout} name={authedUser.name} />
           </header>
           <main>
             <Routes>
               <Route path={home} element={<HomePage />} />
-              <Route path={archives} element={<ArchivePage />} />
-              <Route path={add} element={<AddNewPage />} />
-              <Route path={detail} element={<DetailPage />} />
+              <Route path={archives} element={<ArchiveNotePage />} />
+              <Route path={add} element={<AddNotePage />} />
+              <Route path={detail} element={<DetailNotePage />} />
               <Route path={notFound} element={<NotFoundPage />} />
             </Routes>
           </main>

@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { addNote } from "../utils/network-data";
-import AddNewPageInput from "../components/AddNewPageInput";
+import AddNotePageFormInput from "../components/AddNotePageFormInput";
 
-function AddNewPage() {
+function AddNotePage() {
   const navigate = useNavigate();
 
   const onAddNoteHandler = async (note) => {
@@ -13,9 +13,9 @@ function AddNewPage() {
 
   return (
     <div className="add-new-page">
-      <AddNewPageInput addNote={onAddNoteHandler} />
+      <AddNotePageFormInput addNote={onAddNoteHandler} />
     </div>
   );
 }
 
-export default AddNewPage;
+export default AddNotePage;

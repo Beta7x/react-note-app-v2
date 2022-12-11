@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { MdTranslate } from "react-icons/md";
 import LocaleContext from "../contexts/LocaleContext";
 
-const BtnToggleLocale = () => {
+const LocaleToggleButton = () => {
   const { toggleLocale } = useContext(LocaleContext);
 
   return (
@@ -12,4 +12,4 @@ const BtnToggleLocale = () => {
   );
 };
 
-export default BtnToggleLocale;
+export default LocaleToggleButton;

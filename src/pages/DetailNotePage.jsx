@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import DetailPageAction from "../components/DetailPageAction";
+import DetailNotePageAction from "../components/DetailNotePageAction";
 import { showFormattedDate } from "../utils";
 import {
   archiveNote,
@@ -10,7 +10,7 @@ import {
 } from "../utils/network-data";
 import NotFoundPage from "./NotFoundPage";
 
-const DetailPage = () => {
+const DetailNotePage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const DetailPage = () => {
     navigate("/");
   };
 
-  const onUnarchiveHandler = async (id) => {
+  const onUnarchiveNoteHandler = async (id) => {
     await unarchiveNote(id);
     navigate("/");
   };
@@ -50,16 +50,16 @@ const DetailPage = () => {
         {showFormattedDate(notes.createdAt)}
       </p>
       <div className="detail-page__body">{notes.body}</div>
-      <DetailPageAction
+      <DetailNotePageAction
         id={notes.id}
         title={notes.title}
         archived={notes.archived}
         archiveNote={onArchiveHandler}
-        unArchiveNote={onUnarchiveHandler}
+        unArchiveNote={onUnarchiveNoteHandler}
         deleteNote={onDeleteHandler}
       />
     </section>
   );
 }
 
-export default DetailPage;
+export default DetailNotePage;
